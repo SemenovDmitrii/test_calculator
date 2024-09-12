@@ -47,7 +47,7 @@ try:
     # # Проверяем, что результат равен 0
     # assert result.text == "0"
     result0 = EC.presence_of_element_located((By.ID, "cwos"))
-    result = result0.text
+    result = result0(driver).text
     assert result == "0", f"Ожидался результат '0', а получен '{result}'"
 
 finally:
